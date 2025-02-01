@@ -1,0 +1,408 @@
+body {
+    background-color: rgb(241, 213, 176);
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    
+}
+
+input {
+    margin-bottom: 10px;
+    display: block;
+}
+.processo-em-edicao {
+    background-color: #66BB6A; /* Destaca o processo em edição */
+    border: 2px solid orange; /* Opcional: adiciona uma borda */
+}
+.processo-em-edicao:hover{
+    background-color: #7fed85;
+}
+
+
+h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+    border-color: #f2ff00;
+}
+input[type="number"] {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+input[type="number"]:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+/* .processos{
+    overflow-x: auto;
+    white-space: nowrap;
+} */
+
+/* html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: #ffffee;
+} */
+ .processoLista{
+    margin-left: 500px;
+ }
+.titulo-principal {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.topo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1px; /* Espaço entre os campos de texto e a lista */
+}
+.input-container {
+    flex: 1;
+}
+.processos {
+    flex: 1;
+    padding-right: 40%;
+    padding-bottom: 10px;
+}
+input {
+    margin-bottom: 10px;
+    display: block;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+ul {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0;
+    margin-left: 30%;
+    overflow-y: scroll;
+    max-height: 350px;
+    width: 800px;
+
+    /* Adiciona um padding interno para não sobrepor o conteúdo */
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: #888 #f0f0f0; /* Cor da barra e do fundo (Firefox) */
+}
+
+/* Personaliza o scroll no Chrome, Edge e Safari */
+ul::-webkit-scrollbar {
+    width: 8px; /* Largura da barra */
+}
+
+ul::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Cor de fundo */
+    border-radius: 4px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: #888; /* Cor da barra */
+    border-radius: 4px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor ao passar o mouse */
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+.listaTitulo{
+    margin-left: 500px;
+}
+li {
+    background: #f8f9fa; /* Cor de fundo */
+    border: 2px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+li:hover {
+    background: #e9ecef;
+}
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+button.ativo {
+    background-color: #00ff08;
+    border: 2px solid #45a049;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+button:disabled {
+    opacity: 0.5; /* Torna o botão semitransparente */
+    cursor: not-allowed; /* Indica que o botão está desativado */
+    background-color: #d3d3d3; /* Cor de fundo visível */
+    color: #555; /* Cor do texto */
+    border: 1px solid #999; /* Mantém a borda visível */
+}
+.edit-input {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#chartContainer {
+    overflow-x: auto; /* Adiciona barra de rolagem horizontal */
+    width: 99%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    will-change: transform; /* 👈 Aceleração de hardware */
+    scroll-behavior: smooth; /* Rolagem suave */
+    
+}
+#chart {
+    min-width: 10000px;
+    min-height: fit-content;
+    height: fit-content;/* Mantém o tamanho correto */
+    margin-bottom: 20px;
+    
+     
+    
+}
+.apexcharts-xaxis-label {
+    text-anchor: middle !important;
+    dominant-baseline: hanging !important;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #45a049;
+}
+button:disabled.ativo {
+    background-color: #45a049 !important; /* Mantém a cor de fundo do botão ativo */
+    opacity: 1 !important; /* Remove a transparência padrão */
+    cursor: not-allowed;
+}
+
+/* Estilo para o algoritmo de escalonamento ativo */
+button.active-algorithm:disabled {
+    background-color: #4CAF50 !important;
+    border: 2px solid #45a049;
+    opacity: 1 !important;
+}
+/* Estilo para a área geral do slider */
+.slider-container {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o slider e o valor */
+}
+.botoes-container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 5px; /* Espaço entre os botões */
+    margin-top: 20px;
+
+}
+#reset-btn {
+    background-color: gray;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#reset-btn:hover {
+    background-color: darkgray;
+}
+
+.btn-editar {
+    background-color: rgb(124, 236, 87);
+    margin-left: 20px;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.btn-remover {
+    background-color: red;
+    margin-left: 10px;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    background-color: rgb(62, 204, 15);
+}
+
+.btn-remover:hover {
+    background-color: darkred;
+}
+
+/* Slider estilizado */
+#slider {
+    -webkit-appearance: none; /* Remove o estilo padrão */
+    width: 300px; /* Largura do slider */
+    height: 8px;
+    background: linear-gradient(90deg, #4CAF50 0%, #2196F3 100%); /* Gradiente colorido */
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+/* Quando o slider é clicado */
+#slider:hover {
+    background: linear-gradient(90deg, #66BB6A 0%, #42A5F5 100%);
+}
+
+/* Pino do slider */
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Tamanho do pino */
+    height: 20px;
+    background: #FFFFFF; /* Cor do pino */
+    border: 2px solid #2196F3;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras no pino */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Quando o pino é clicado */
+#slider::-webkit-slider-thumb:active {
+    transform: scale(1.2); /* Aumenta um pouco */
+}
+
+/* Valor do slider */
+#slider-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    min-width: 50px; /* Espaço fixo para evitar deslocamentos */
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+
+#turnaroundContainer {
+    text-align: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 15%;
+    max-width: 300px;
+    margin: 0 auto;
+    max-height: 200px;
+}
+
+#turnaroundContainer h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0;
+}
+
+#turnaroundContainer p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00E396;
+    margin: 10px 0 0;
+}
+.memory-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+
+td {
+    width: 35px;
+    height: 35px;
+    border: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+}
+
+td.vazio {
+    color: red; /* Para destacar as células vazias */
+}
+
+td.ocupado {
+    background-color: lightgreen;
+    
+    
+}
